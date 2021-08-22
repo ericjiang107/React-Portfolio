@@ -19,7 +19,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 // importing pictures:
-import Flask1 from '../../components/assets/images/Flask_Gundam.jpg';
+import background from '../../components/assets/images/2016.jpg';
 
 // interface Props {
 //     title: string;
@@ -69,6 +69,15 @@ const useStyles = makeStyles((theme) => ({
     upper1: {
         paddingTop: '65px'
     },
+    background_Image: {
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
+        width: '100%',
+        height: '100%',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        position: 'absolute'
+    },
 }))
 
 export const Projects = () => {
@@ -92,135 +101,136 @@ export const Projects = () => {
                 component={Link} to={'/aboutMe'}>
                 </Button>
             </div> */}
-
-            <Container maxWidth="lg">
-                <Grid container spacing={3} className={classes.upper}>
-                    <Grid item xs>
-                        <Card className={classes.root2}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="Capstone Project: Single Card Price Checker (SCPC)"
-                            height="300"
-                            image="/static/images/cards/contemplative-reptile.jpg"
-                            title="Capstone Project: Single Card Price Checker (SCPC)"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs>
-                    <Card className={classes.root2}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="React Portfolio"
-                            height="300"
-                            image="/static/images/cards/contemplative-reptile.jpg"
-                            title="React Portfolio"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
-                    </Grid>
+            <div className={classes.background_Image}>
+                <Container maxWidth="lg">
+                    <Grid container spacing={3} className={classes.upper}>
+                        <Grid item xs>
+                            <Card className={classes.root2}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="Capstone Project: Single Card Price Checker (SCPC)"
+                                height="300"
+                                image="/static/images/cards/contemplative-reptile.jpg"
+                                title="Capstone Project: Single Card Price Checker (SCPC)"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
                         <Grid item xs>
                         <Card className={classes.root2}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="Flask Gundam"
-                            height="300"
-                            image={require("../../components/assets/images/Flask_Gundam.JPG")}
-                            title="Flask Gundam"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="React Portfolio"
+                                height="300"
+                                image="/static/images/cards/contemplative-reptile.jpg"
+                                title="React Portfolio"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
+                            <Grid item xs>
+                            <Card className={classes.root2}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="Flask Gundam"
+                                height="300"
+                                image={require("../assets/images/Flask_Gundam.JPG").default}
+                                title="Flask Gundam"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
                     </Grid>
-                </Grid>
 
-                {/* Line 2: */}
-                <Grid container spacing={3} className={classes.upper1}>
-                    <Grid item xs>
-                        <Card className={classes.root2}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="Pokemon Database"
-                            height="300"
-                            image={require("../../components/assets/images/Pokemon.JPG")}
-                            title="Pokemon Database"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
-                    </Grid>
-                    <Grid item xs>
-                    <Card className={classes.root2} >
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="ROI"
-                            height="300"
-                            image={require("../../components/assets/images/ROI.JPG")}
-                            title="ROI"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
-                    </Grid>
+                    {/* Line 2: */}
+                    <Grid container spacing={3} className={classes.upper1}>
                         <Grid item xs>
-                        <Card className={classes.root2}>
-                        <CardActionArea>
-                            <CardMedia
-                            component="img"
-                            alt="Weather_App"
-                            height="300"
-                            image={require("../../components/assets/images/Weather_App.JPG")}
-                            title="Weather_App"
-                            />
-                            <CardContent>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
-                            Github Repository
-                            </Button>
-                        </CardActions>
-                        </Card>
+                            <Card className={classes.root2}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="Pokemon Database"
+                                height="200"
+                                image={require("../../components/assets/images/Pokemon.JPG").default}
+                                title="Pokemon Database"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
+                        <Grid item xs>
+                        <Card className={classes.root2} >
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="ROI"
+                                height="160"
+                                image={require("../../components/assets/images/ROI.JPG").default}
+                                title="ROI"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
+                            <Grid item xs>
+                            <Card className={classes.root2}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="Weather_App"
+                                height="200"
+                                image={require("../../components/assets/images/Weather_App.JPG").default}
+                                title="Weather_App"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
+                                Github Repository
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </div>
         </div>
     )
 }

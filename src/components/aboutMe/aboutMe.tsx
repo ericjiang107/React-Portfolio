@@ -46,7 +46,8 @@ button: {
 },
 center: {
     textAlign: 'center',
-    fontSize: '1.2rem'
+    fontSize: '1.2rem',
+    color: 'white',
 },
 padding: {
     paddingTop: '40px'
@@ -82,112 +83,114 @@ export const AboutMe = () => {
 
         <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
         className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
-        <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
-            <p>
-                I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 
-                I have had an array of experience both academic, work experience and as an intern to transfer my learnings into a successful organization. 
-            </p>
-            <br></br>
-            <p>
-                My areas of strength include:
-                • Strong Team collaborative skills
-                • Focused Problem Solver
-                • Detail-Oriented with a strong work ethic
-                • Strong Analytical Skills
-            </p>
-            <br></br>
-            <p>
-                Languages include: Python, JavaScript, React, Flask, SQL, TypeScript, Chinese
-                Others include: Matlab, Solidworks, ANSYS
-            </p>
-        </Container>
-        <Container maxWidth="md" className={classes.padding}>
-            <Timeline align="alternate">
-                <TimelineItem>
-                    <TimelineOppositeContent>
-                    <Typography variant="body2" color="textSecondary">
-                        May, 2020
-                    </Typography>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                    <TimelineDot>
-                        <SchoolIcon style={{ fontSize: 30 }} />
-                    </TimelineDot>
-                    <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
-                        <Typography variant="h6" component="h1">
-                        Graduate
+        <div className={classes.background_Image}>
+            <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
+                <p>
+                    I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 
+                    I have had an array of experience both academic, work experience and as an intern to transfer my learnings into a successful organization. 
+                </p>
+                <br></br>
+                <p>
+                    My areas of strength include:
+                    • Strong Team collaborative skills
+                    • Focused Problem Solver
+                    • Detail-Oriented with a strong work ethic
+                    • Strong Analytical Skills
+                </p>
+                <br></br>
+                <p>
+                    Languages include: Python, JavaScript, React, Flask, SQL, TypeScript, Chinese
+                    Others include: Matlab, Solidworks, ANSYS
+                </p>
+            </Container>
+            <Container maxWidth="md" className={classes.padding}>
+                <Timeline align="alternate">
+                    <TimelineItem>
+                        <TimelineOppositeContent>
+                        <Typography variant="body2" color="error">
+                            May, 2020
                         </Typography>
-                        <Typography>Completed College with a BS in Mechanical Engineering and a Minor in Mathematics 📜 </Typography>
-                    </Paper>
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent>
-                    <Typography variant="body2" color="textSecondary">
-                        March, 2021
-                    </Typography>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                    <TimelineDot color="primary">
-                        <WorkIcon style={{ fontSize: 25 }} />
-                    </TimelineDot>
-                    <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
-                        <Typography variant="h6" component="h1">
-                        Sales and Application Engineer
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                        <TimelineDot>
+                            <SchoolIcon style={{ fontSize: 30 }} />
+                        </TimelineDot>
+                        <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                        <Paper elevation={3} className={classes.paper}>
+                            <Typography variant="h6" component="h1">
+                            Graduate
+                            </Typography>
+                            <Typography>Completed College with a BS in Mechanical Engineering and a Minor in Mathematics 📜 </Typography>
+                        </Paper>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent>
+                        <Typography variant="body2" color="error">
+                            March, 2021
                         </Typography>
-                        <Typography>Got hired as a Sales and Application Engineer at Omega Engineering 👷‍♂️ </Typography>
-                    </Paper>
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent>
-                        <Typography variant="body2" color="textSecondary">
-                            May 2021
-                        </Typography>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                    <TimelineDot color="primary" variant="outlined">
-                        <WorkOffIcon style={{ fontSize: 25 }} />
-                    </TimelineDot>
-                    <TimelineConnector className={classes.secondaryTail} />
-                    </TimelineSeparator>
-                    <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
-                        <Typography variant="h6" component="h1">
-                        Quit Work
-                        </Typography>
-                        <Typography>Left work because of personal reasons and decided to pursue coding due to interest</Typography>
-                    </Paper>
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineOppositeContent>
-                        <Typography variant="body2" color="textSecondary">
-                            July 2021
-                        </Typography>
-                    </TimelineOppositeContent>
-                    <TimelineSeparator>
-                    <TimelineDot color="secondary">
-                        <GitHubIcon2 style={{ fontSize: 25 }} />
-                    </TimelineDot>
-                    </TimelineSeparator>
-                    <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
-                        <Typography variant="h6" component="h1">
-                        Acceptance/Start of Coding Temple
-                        </Typography>
-                        <Typography>Got accepted to Coding Temple and currently attending classes 👨‍💻 </Typography>
-                    </Paper>
-                    </TimelineContent>
-                </TimelineItem>
-            </Timeline>
-        </Container>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                        <TimelineDot color="primary">
+                            <WorkIcon style={{ fontSize: 25 }} />
+                        </TimelineDot>
+                        <TimelineConnector />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                        <Paper elevation={3} className={classes.paper}>
+                            <Typography variant="h6" component="h1">
+                            Sales and Application Engineer
+                            </Typography>
+                            <Typography>Got hired as a Sales and Application Engineer at Omega Engineering 👷‍♂️ </Typography>
+                        </Paper>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent>
+                            <Typography variant="body2" color="error">
+                                May 2021
+                            </Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                        <TimelineDot color="primary" variant="outlined">
+                            <WorkOffIcon style={{ fontSize: 25 }} />
+                        </TimelineDot>
+                        <TimelineConnector className={classes.secondaryTail} />
+                        </TimelineSeparator>
+                        <TimelineContent>
+                        <Paper elevation={3} className={classes.paper}>
+                            <Typography variant="h6" component="h1">
+                            Quit Work
+                            </Typography>
+                            <Typography>Left work because of personal reasons and decided to pursue coding due to interest</Typography>
+                        </Paper>
+                        </TimelineContent>
+                    </TimelineItem>
+                    <TimelineItem>
+                        <TimelineOppositeContent>
+                            <Typography variant="body2" color="error">
+                                July 2021
+                            </Typography>
+                        </TimelineOppositeContent>
+                        <TimelineSeparator>
+                        <TimelineDot color="secondary">
+                            <GitHubIcon2 style={{ fontSize: 25 }} />
+                        </TimelineDot>
+                        </TimelineSeparator>
+                        <TimelineContent>
+                        <Paper elevation={3} className={classes.paper}>
+                            <Typography variant="h6" component="h1">
+                            Acceptance/Start of Coding Temple
+                            </Typography>
+                            <Typography>Got accepted to Coding Temple and currently attending classes 👨‍💻 </Typography>
+                        </Paper>
+                        </TimelineContent>
+                    </TimelineItem>
+                </Timeline>
+            </Container>
+        </div>
     </div>
    );
 }
