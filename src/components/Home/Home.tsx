@@ -8,6 +8,10 @@ import background from '../../components/assets/images/2016.jpg';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Button from '@material-ui/core/Button';
+import InfoIcon from '@material-ui/icons/Info';
+import HomeIcon from '@material-ui/icons/Home';
+import GitHubIcon from '@material-ui/icons/GitHub'
 // For routing:
 import { Link } from 'react-router-dom';
 
@@ -16,7 +20,7 @@ interface Props {
 }
 
 // Establishing material-ui -- styling:
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
     root: {
         color: 'blue',
         fontSize: '50px',
@@ -48,26 +52,14 @@ const useStyles = makeStyles({
     upper: {
         paddingTop: '250px'
     },
-    navbar_container: {
-        display: 'flex',
-        justifyContent: 'space-between', //everything is evenly spaced as far as the nav items
-        alignItems: 'center'
-    },
-    logo_navigation: {
-        listStyle: 'none',
-        textTransform: 'uppercase',
-        textDecoration: 'none'
-    },
-    navigation: {
-        display: 'flex'
-    },
-    nav_a:{
-        display: 'block',
-        padding: '1em',
-        color: 'black',
-        fontSize: '1.3rem'
+    button: {
+        margin: theme.spacing(1.7),
+        background: 'linear-gradient(45deg, #5f2c82 30%, #49a09d 90%)',
+        boxShadow: '0 3px 5px 2px rgba(0, 190, 250, .3)',
+        borderRadius: 3,
+        fontSize: '17px'
     }
-})
+}))
 
 
 export const Home = (props:Props) => {
@@ -79,26 +71,22 @@ export const Home = (props:Props) => {
     // };
     return (
         <div className = {classes.root}>
-            <nav>
-                <div className={classes.navbar_container}>
-                    <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
-                        <li>
-                            <Link to='/' className={classes.nav_a}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to='/aboutMe' className={classes.nav_a}>About Me</Link>
-                        </li>
-                        <li>
-                            <Link to='/Projects' className={classes.nav_a}>Projects</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            {/* Buttons for navbar */}
+            <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
+
+            <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
+
+            <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
+
             <div className={classes.background_Image}>
             <Container maxWidth="xs">
                 <div className = {classes.upper}>
-                    <div className = {classes.me}>
-                    </div>
+                    <Button className = {classes.me} onClick={() => console.log('clicked')} type="submit" color="secondary" variant="contained"
+                    component={Link} to={'/aboutMe'}>
+                    </Button>
                 </div>
             </Container>
             </div>

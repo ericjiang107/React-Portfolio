@@ -1,5 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import InfoIcon from '@material-ui/icons/Info';
+import HomeIcon from '@material-ui/icons/Home';
+import GitHubIcon from '@material-ui/icons/GitHub'
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -10,7 +14,7 @@ import TimelineDot from '@material-ui/lab/TimelineDot';
 import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import WorkOffIcon from '@material-ui/icons/WorkOff';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import GitHubIcon2 from '@material-ui/icons/GitHub';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 // importing container and box
@@ -32,24 +36,12 @@ root: {
     padding: '0',
     margin: '0'
 },
-navbar_container: {
-    display: 'flex',
-    justifyContent: 'space-between', //everything is evenly spaced as far as the nav items
-    alignItems: 'center'
-},
-logo_navigation: {
-    listStyle: 'none',
-    textTransform: 'uppercase',
-    textDecoration: 'none'
-},
-navigation: {
-    display: 'flex'
-},
-nav_a:{
-    display: 'block',
-    padding: '1em',
-    color: 'black',
-    fontSize: '1.3rem'
+button: {
+    margin: theme.spacing(1.7),
+    background: 'linear-gradient(45deg, #5f2c82 30%, #49a09d 90%)',
+    boxShadow: '0 3px 5px 2px rgba(0, 190, 250, .3)',
+    borderRadius: 3,
+    fontSize: '17px'
 },
 center: {
     textAlign: 'center',
@@ -78,21 +70,14 @@ export const AboutMe = () => {
 
   return (
     <div>
-        <nav>
-            <div className={classes.navbar_container}>
-                <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
-                    <li>
-                        <Link to='/' className={classes.nav_a}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to='/aboutMe' className={classes.nav_a}>About Me</Link>
-                    </li>
-                    <li>
-                        <Link to='/Projects' className={classes.nav_a}>Projects</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+        className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
+
+        <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+        className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
+
+        <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+        className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
         <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
             <p>
                 I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 
@@ -122,7 +107,7 @@ export const AboutMe = () => {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                     <TimelineDot>
-                        <SchoolIcon />
+                        <SchoolIcon style={{ fontSize: 30 }} />
                     </TimelineDot>
                     <TimelineConnector />
                     </TimelineSeparator>
@@ -143,7 +128,7 @@ export const AboutMe = () => {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                     <TimelineDot color="primary">
-                        <WorkIcon />
+                        <WorkIcon style={{ fontSize: 25 }} />
                     </TimelineDot>
                     <TimelineConnector />
                     </TimelineSeparator>
@@ -164,7 +149,7 @@ export const AboutMe = () => {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                     <TimelineDot color="primary" variant="outlined">
-                        <WorkOffIcon />
+                        <WorkOffIcon style={{ fontSize: 25 }} />
                     </TimelineDot>
                     <TimelineConnector className={classes.secondaryTail} />
                     </TimelineSeparator>
@@ -185,7 +170,7 @@ export const AboutMe = () => {
                     </TimelineOppositeContent>
                     <TimelineSeparator>
                     <TimelineDot color="secondary">
-                        <GitHubIcon />
+                        <GitHubIcon2 style={{ fontSize: 25 }} />
                     </TimelineDot>
                     </TimelineSeparator>
                     <TimelineContent>
