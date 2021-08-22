@@ -1,12 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Home, Projects, AboutMe } from './components';
+import './styles.css';
+// importing for router-dom:
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+
+        <Route exact path='/'>
+          <Home title={'My Portfolio'} />
+        </Route>
+
+        <Route path='/Projects'>
+          <Projects />
+        </Route>
+
+        <Route path='/aboutMe'>
+          <AboutMe />
+        </Route>
+
+      </Switch>
+    </Router>
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );
