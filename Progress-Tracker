@@ -3,4 +3,7 @@ Day 1: Added routes to react project -- messed around with styling
 Day 2: Added About Me section utilizing timeline
 
 Day 3: Updated nav bar and center image. Added projects into project section followed by attached link to their respectivie Github repositories. 
-Added form for contacting and updated the navigation bar. 
+Added form for contacting and updated the navigation bar. Issues surfaced when rendering images for cardMedia under material-ui. 
+
+Day 4: Fixed image rendering in Projects section, added additional images and links. Updated background with an image. Set up database
+using Firestore. 
