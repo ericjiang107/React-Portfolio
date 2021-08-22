@@ -15,6 +15,7 @@ import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import WorkOffIcon from '@material-ui/icons/WorkOff';
 import GitHubIcon2 from '@material-ui/icons/GitHub';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 // importing container and box
@@ -27,7 +28,7 @@ import background from '../../components/assets/images/2016.jpg';
 
 
 const useStyles = makeStyles((theme) => ({
-  paper: {
+paper: {
     padding: '25px 16px',
 },
 root: {
@@ -78,6 +79,9 @@ export const AboutMe = () => {
 
         <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
         className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
+
+        <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+        className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
         <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
             <p>
                 I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 

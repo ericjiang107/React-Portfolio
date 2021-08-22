@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { Home, Projects, AboutMe } from './components';
+import { Home, Projects, AboutMe, Contact } from './components';
 import './styles.css';
 // importing for router-dom:
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -21,6 +21,10 @@ ReactDOM.render(
 
         <Route path='/aboutMe'>
           <AboutMe />
+        </Route>
+
+        <Route path='/Contact'>
+          <Contact />
         </Route>
 
       </Switch>

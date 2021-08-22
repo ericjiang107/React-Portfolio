@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 import me from '../../components/assets/images/linkedin.jpg';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -83,6 +84,9 @@ export const Projects = () => {
             <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
 
+            <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+
             {/* <div>
                 <Button className = {classes.me} onClick={() => console.log('clicked')} type="submit" color="secondary" variant="contained"
                 component={Link} to={'/aboutMe'}>
@@ -106,7 +110,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
@@ -126,7 +130,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
@@ -146,7 +150,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
@@ -170,7 +174,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
@@ -190,7 +194,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
@@ -210,7 +214,7 @@ export const Projects = () => {
                         </CardActionArea>
                         <CardActions>
                             <Button size="small" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
-                            Git Repository
+                            Github Repository
                             </Button>
                         </CardActions>
                         </Card>
