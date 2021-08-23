@@ -150,8 +150,8 @@ export const Contact = () => {
             <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
 
-            <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+            {/* <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button> */}
 
             
             {/* Form Section */}

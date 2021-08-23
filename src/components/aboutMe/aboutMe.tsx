@@ -15,9 +15,12 @@ import SchoolIcon from '@material-ui/icons/School';
 import WorkIcon from '@material-ui/icons/Work';
 import WorkOffIcon from '@material-ui/icons/WorkOff';
 import GitHubIcon2 from '@material-ui/icons/GitHub';
+import BookIcon from '@material-ui/icons/Book';
+import LocalDrinkIcon from '@material-ui/icons/LocalDrink';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 // importing container and box
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
@@ -25,6 +28,12 @@ import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 // For image:
 import background from '../../components/assets/images/2016.jpg';
+// For cardMedia:
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -47,10 +56,9 @@ button: {
 center: {
     textAlign: 'center',
     fontSize: '1.2rem',
-    color: 'white',
 },
 padding: {
-    paddingTop: '40px'
+    paddingTop: '40px',
 },
 background_Image: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
@@ -63,7 +71,28 @@ background_Image: {
 },
 secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
-    },
+},
+padding2: {
+    paddingBottom: '30px'
+},
+padding3: {
+    paddingBottom: '35px',
+    paddingTop: '35px'
+},
+root2: {
+    flexGrow: 1,
+},
+paper1: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+},
+root3: {
+    maxWidth: '345',
+},
+center2: {
+    textAlign: 'center',
+},
 }));
 
 
@@ -72,30 +101,30 @@ export const AboutMe = () => {
 
   return (
     <div>
+        <div>
         <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
         className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
 
-        <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
-        className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
+        {/* <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+        className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button> */}
 
         <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
         className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
 
         <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
         className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
-        <div className={classes.background_Image}>
+        <div>
+        <div>
             <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
+                <h1 className={classes.padding2}>About Me</h1>
                 <p>
-                    I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 
+                    Hello! My name is Eric Jiang and I am an interactive, passionate, and motivated 2020 graduate with a keen interest in engineering, software development, and coding. 
                     I have had an array of experience both academic, work experience and as an intern to transfer my learnings into a successful organization. 
                 </p>
                 <br></br>
                 <p>
-                    My areas of strength include:
-                    • Strong Team collaborative skills
-                    • Focused Problem Solver
-                    • Detail-Oriented with a strong work ethic
-                    • Strong Analytical Skills
+                    My areas of strength include: Having strong team collaborative skills, being a focused problem solver, I am
+                    a detail-oriented person with a strong work ethic while also having strong analytical skills.
                 </p>
                 <br></br>
                 <p>
@@ -103,8 +132,11 @@ export const AboutMe = () => {
                     Others include: Matlab, Solidworks, ANSYS
                 </p>
             </Container>
-            <Container maxWidth="md" className={classes.padding}>
-                <Timeline align="alternate">
+
+                
+                <Container maxWidth="md" className={classes.padding}>
+                    <h1 className={`${classes.padding3} ${classes.center2}`}>Timeline</h1>
+                    <Timeline align="alternate">
                     <TimelineItem>
                         <TimelineOppositeContent>
                         <Typography variant="body2" color="error">
@@ -112,7 +144,7 @@ export const AboutMe = () => {
                         </Typography>
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineDot>
+                        <TimelineDot color="inherit">
                             <SchoolIcon style={{ fontSize: 30 }} />
                         </TimelineDot>
                         <TimelineConnector />
@@ -189,7 +221,37 @@ export const AboutMe = () => {
                         </TimelineContent>
                     </TimelineItem>
                 </Timeline>
+
+                <Container maxWidth="sm" className={`${classes.center2} ${classes.padding}`}>
+                    <h1 className={classes.padding3}>My Resume</h1>
+                    <Grid container spacing={3}>
+                        <Grid item xs>
+                            <Card className={classes.root3}>
+                            <CardActionArea>
+                                <CardMedia
+                                component="img"
+                                alt="Flask Gundam"
+                                height="250"
+                                image={require("../assets/images/Resume.JPG").default}
+                                title="Flask Gundam"
+                                />
+                                <CardContent>
+                                </CardContent>
+                            </CardActionArea>
+                            <CardActions>
+                                <Button size="small" color="primary" href="https://ericjiang107.github.io/Resume/" onClick={() => console.log('clicked')} type="submit">
+                                Click Here
+                                </Button>
+                            </CardActions>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </Container>
+
+
             </Container>
+            </div>
+            </div>
         </div>
     </div>
    );
