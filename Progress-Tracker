@@ -6,4 +6,4 @@ Day 3: Updated nav bar and center image. Added projects into project section fol
 Added form for contacting and updated the navigation bar. Issues surfaced when rendering images for cardMedia under material-ui. 
 
 Day 4: Fixed image rendering in Projects section, added additional images and links. Updated background with an image. Set up database
-using Firestore. 
+using Firestore. Updated functionality for navbar and fixed the links so that they open on a new tab. 
