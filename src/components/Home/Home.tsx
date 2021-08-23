@@ -73,8 +73,8 @@ export const Home = (props:Props) => {
     return (
         <div className = {classes.root}>
             {/* Buttons for navbar */}
-            <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
+            {/* <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button> */}
 
             <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>

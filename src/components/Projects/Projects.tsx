@@ -158,7 +158,7 @@ export const Projects = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
                                 </Button>
                             </CardActions>
@@ -182,7 +182,7 @@ export const Projects = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
                                 </Button>
                             </CardActions>
@@ -202,7 +202,7 @@ export const Projects = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
                                 </Button>
                             </CardActions>
@@ -222,7 +222,7 @@ export const Projects = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
                                 </Button>
                             </CardActions>

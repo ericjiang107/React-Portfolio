@@ -96,7 +96,11 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '13px',
         borderRadius: '10px',
         fontWeight: 'bold',
-    }
+    },
+    // sticky: {
+    //     position: 'sticky',
+    //     left: 0,
+    // }
 }))
 
 
@@ -152,7 +156,6 @@ export const Contact = () => {
 
             {/* <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button> */}
-
             
             {/* Form Section */}
             <div className={classes.background_Image}>
@@ -161,7 +164,7 @@ export const Contact = () => {
                         <label className={classes.formLabel}>Name</label>
                         <input placeholder="Enter Name" className={classes.formInput} value={name} onChange={(e) => setName(e.target.value)} />
 
-                        <label className={classes.formLabel}>Email</label>
+                        <label className={classes.formLabel}>Email/Phone Number</label>
                         <input placeholder="Enter Email" className={classes.formInput} value={email} onChange={(e) => setEmail(e.target.value)} />
 
                         <label className={classes.formLabel}>Message</label>

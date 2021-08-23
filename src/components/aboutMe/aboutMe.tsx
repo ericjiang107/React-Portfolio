@@ -36,6 +36,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
 
+
 const useStyles = makeStyles((theme) => ({
 paper: {
     padding: '25px 16px',
@@ -93,6 +94,9 @@ root3: {
 center2: {
     textAlign: 'center',
 },
+c4: {
+    backgroundColor: 'rgb(217, 217, 217)'
+}
 }));
 
 
@@ -102,19 +106,19 @@ export const AboutMe = () => {
   return (
     <div>
         <div>
-        <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
-        className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
+            <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
 
-        {/* <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
-        className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button> */}
+            {/* <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button> */}
 
-        <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
-        className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
+            <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
 
-        <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
-        className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+            <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
         <div>
-        <div>
+        <div className={classes.c4}>
             <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
                 <h1 className={classes.padding2}>About Me</h1>
                 <p>
@@ -239,7 +243,7 @@ export const AboutMe = () => {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary" href="https://ericjiang107.github.io/Resume/" onClick={() => console.log('clicked')} type="submit">
+                                <Button size="small" target="_blank" color="primary" href="https://ericjiang107.github.io/Resume/" onClick={() => console.log('clicked')} type="submit">
                                 Click Here
                                 </Button>
                             </CardActions>
