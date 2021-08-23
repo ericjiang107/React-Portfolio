@@ -59,6 +59,13 @@ const useStyles = makeStyles((theme) => ({
         boxShadow: '0 3px 5px 2px rgba(0, 190, 250, .3)',
         borderRadius: 3,
         fontSize: '17px'
+    },
+    sticky: {
+        position: 'fixed',
+        top: 0,
+        zIndex: 100,
+        width: '100%',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
     }
 }))
 
@@ -72,18 +79,19 @@ export const Home = (props:Props) => {
     // };
     return (
         <div className = {classes.root}>
-            {/* Buttons for navbar */}
-            {/* <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button> */}
+            <nav className={classes.sticky}>
+                {/* <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/'}>Home</Button> */}
 
-            <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
+                <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
 
-            <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
+                <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button>
 
-            <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+                <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+            </nav>
 
             <div className={classes.background_Image}>
             <Container maxWidth="xs">

@@ -78,30 +78,41 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center',
         position: 'absolute'
     },
+    sticky: {
+        position: 'fixed',
+        top: 0,
+        zIndex: 100,
+        width: '100%',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
+    },
+    padding: {
+        paddingTop: '90px',
+    },
 }))
 
 export const Projects = () => {
     const classes = useStyles();
     return (
         <div>
-            <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
+            <nav className={classes.sticky}>
+                <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
 
-            <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
+                <Button variant="contained" color="secondary" startIcon={<InfoIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/aboutMe'}>About Me</Button>
 
-            {/* <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button> */}
+                {/* <Button variant="contained" color="secondary" startIcon={<GitHubIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/Projects'}>Projects</Button> */}
 
-            <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
-            className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
-
+                <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
+                className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
+            </nav>
             {/* <div>
                 <Button className = {classes.me} onClick={() => console.log('clicked')} type="submit" color="secondary" variant="contained"
                 component={Link} to={'/aboutMe'}>
                 </Button>
             </div> */}
-            <div className={classes.background_Image}>
+            <div className={`${classes.background_Image} ${classes.padding}`}>
                 <Container maxWidth="lg">
                     <Grid container spacing={3} className={classes.upper}>
                         <Grid item xs>

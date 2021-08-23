@@ -34,6 +34,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import { url } from 'inspector';
 
 
 
@@ -59,7 +60,7 @@ center: {
     fontSize: '1.2rem',
 },
 padding: {
-    paddingTop: '40px',
+    paddingTop: '90px',
 },
 background_Image: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
@@ -96,6 +97,21 @@ center2: {
 },
 c4: {
     backgroundColor: 'rgb(217, 217, 217)'
+},
+sticky: {
+    position: 'fixed',
+    top: 0,
+    zIndex: 100,
+    width: '100%',
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
+},
+arrowUp: {
+    display: 'none', // hides 
+    position: 'fixed',
+    bottom: '20px',
+    right: '30px',
+    zIndex: 99, // so this doesn't overlap anything
+    // scrollBehavior: 'smooth',
 }
 }));
 
@@ -103,9 +119,34 @@ c4: {
 export const AboutMe = () => {
   const classes = useStyles();
 
+    // Button show:
+    //Get the button:
+    let mybutton = document.getElementById("test");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    };
+
+
+
   return (
     <div>
-        <div>
+        <Button onClick={() => { (topFunction()) }} id="test" className={classes.arrowUp}>Top</Button>
+
+        <nav className={classes.sticky}>
             <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/'}>Home</Button>
 
@@ -117,7 +158,7 @@ export const AboutMe = () => {
 
             <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
-        <div>
+        </nav>
         <div className={classes.c4}>
             <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
                 <h1 className={classes.padding2}>About Me</h1>
@@ -254,8 +295,6 @@ export const AboutMe = () => {
 
 
             </Container>
-            </div>
-            </div>
         </div>
     </div>
    );
