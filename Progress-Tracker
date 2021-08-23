@@ -7,3 +7,6 @@ Added form for contacting and updated the navigation bar. Issues surfaced when r
 
 Day 4: Fixed image rendering in Projects section, added additional images and links. Updated background with an image. Set up database
 using Firestore. Updated functionality for navbar and fixed the links so that they open on a new tab. 
+
+Day 5: Added sticky to the navbar so it stays on the top followed by a scroll back to top page option. Recieving errors such as: TypeError:
+cannot read property 'style' of null, etc. 
