@@ -10,3 +10,6 @@ using Firestore. Updated functionality for navbar and fixed the links so that th
 
 Day 5: Added sticky to the navbar so it stays on the top followed by a scroll back to top page option. Recieving errors such as: TypeError:
 cannot read property 'style' of null, etc. 
+
+Day 6: Added scrollup bar feature. Fixed TypeError (first fix: using console.log -- fixed error to a point. second fix: reformatted the 
+code for the bar). The scrollup bar still needs a bit of styling update but the overall functionality works. 
