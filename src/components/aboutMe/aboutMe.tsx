@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import InfoIcon from '@material-ui/icons/Info';
@@ -35,6 +36,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import { url } from 'inspector';
+// import fontawesome:
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FaArrowCircleUp } from '@react-icons/all-files/fa/FaArrowCircleUp';
+
 
 
 
@@ -106,13 +112,24 @@ sticky: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
 },
 arrowUp: {
-    display: 'none', // hides 
+    // display: 'none', // hides 
     position: 'fixed',
-    bottom: '20px',
-    right: '30px',
-    zIndex: 99, // so this doesn't overlap anything
+    width: '100%',
+    left: '50%',
+    bottom: '40px',
+    height: '55px',
+    // right: '30px',
+    zIndex: 1, // so this doesn't overlap anything
     // scrollBehavior: 'smooth',
-}
+    cursor: 'pointer',
+    color: 'green',
+    paddingRight: '120px',
+},
+formButton: {
+    '&:hover': {
+        backgroundColor: 'grey'
+    },
+},
 }));
 
 
@@ -121,30 +138,57 @@ export const AboutMe = () => {
 
     // Button show:
     //Get the button:
-    let mybutton = document.getElementById("test");
+    // let mybutton = document.getElementById("test");
+    // console.log(mybutton)
+
+    const [visible, setVisible] = useState(false);
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if(scrolled > 1){
+            setVisible(true)
+        }else if(scrolled <= 1){
+            setVisible(false)
+        }
+    };
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+    window.addEventListener('scroll', toggleVisible);
+
+
+
+    // const scrollFunction = () => {
+    //     window.scrollTo(0,0);
+    // }
+
+
+
+    // const [diplay, setDiaply] = useState('none') <--- use this for the arrow appearing 
+    // const scrollFunction = () => {
+    //     if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //         setDisplay('block');
+    //     } else {
+    //         display;
+    // }
 
     // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-    }
+    // window.onscroll = function() {scrollFunction()};
 
     // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    };
+    // function topFunction() {
+    // document.body.scrollTop = 0; // For Safari
+    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    // };
 
+    const CoffeeIcon = <FontAwesomeIcon icon={faArrowUp} />
 
-
-  return (
+    return (
     <div>
-        <Button onClick={() => { (topFunction()) }} id="test" className={classes.arrowUp}>Top</Button>
+
+        <Button><FaArrowCircleUp size={"2x"} onClick={scrollToTop} style={{display: visible ? 'inline' : 'none'}} className={`${classes.arrowUp} ${classes.formButton}`} /></Button>
 
         <nav className={classes.sticky}>
             <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
