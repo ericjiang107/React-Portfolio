@@ -12,4 +12,5 @@ Day 5: Added sticky to the navbar so it stays on the top followed by a scroll ba
 cannot read property 'style' of null, etc. 
 
 Day 6: Added scrollup bar feature. Fixed TypeError (first fix: using console.log -- fixed error to a point. second fix: reformatted the 
-code for the bar). The scrollup bar still needs a bit of styling update but the overall functionality works. 
+code for the bar). The scrollup bar still needs a bit of styling update but the overall functionality works. Debugged code for troubleshooting.
+Found out there were mild style changes that impacted the scrollup bar. Will continue to debug. 
