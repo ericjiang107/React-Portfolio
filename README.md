@@ -1,50 +1,22 @@
-# Please see Progress Tracker for the updates on this project. 
+Website: [https://portfolio-contact-form-6ddf2.web.app/](https://portfolio-contact-form-6ddf2.web.app/)
 
+**`Day 1`**: Added routes to react project -- messed around with styling
 
+**`Day 2`**: Added About Me section utilizing timeline
 
-# Getting Started with Create React App
+**`Day 3:`** : Updated nav bar and center image. Added projects into project section followed by attached link to their respectivie Github repositories. 
+Added form for contacting and updated the navigation bar. Issues surfaced when rendering images for cardMedia under material-ui. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**`Day 4`**: Fixed image rendering in Projects section, added additional images and links. Updated background with an image. Set up database
+using Firestore. Updated functionality for navbar and fixed the links so that they open on a new tab. 
 
-## Available Scripts
+**`Day 5`**: Added sticky to the navbar so it stays on the top followed by a scroll back to top page option. Recieving errors such as: TypeError:
+cannot read property 'style' of null, etc. 
 
-In the project directory, you can run:
+**`Day 6`**: Added scrollup bar feature. Fixed TypeError (first fix: using console.log -- fixed error to a point. second fix: reformatted the 
+code for the bar). The scrollup bar still needs a bit of styling update but the overall functionality works. Debugged code for troubleshooting.
+Found out there were mild style changes that impacted the scrollup bar. Will continue to debug. 
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**`Day 7`**: Updated Home page with proper background image. Added Scroll to top component and fixed navigation in home page. Updated About Me page 
+with fixed navigation images, background color and updated about me section with new text as well as resume link button. Changed Contact Me page's 
+background and nav bar as well as fixed the height of the form. Additionally, I added my github schedule/number of times I've committed on there. 
