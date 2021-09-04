@@ -28,7 +28,7 @@ import Box from '@material-ui/core/Box';
 // For routing:
 import { Link } from 'react-router-dom';
 // For image:
-import background from '../../components/assets/images/2016.jpg';
+import background from '../../components/assets/images/flushing_meadows.jpg';
 // For cardMedia:
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -38,8 +38,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { url } from 'inspector';
 // import fontawesome:
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { FaArrowCircleUp } from '@react-icons/all-files/fa/FaArrowCircleUp';
+// importing Scrollup Bar component:
+import { ScrollBar } from '..';
 
 
 
@@ -109,26 +109,7 @@ sticky: {
     top: 0,
     zIndex: 100,
     width: '100%',
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
-},
-arrowUp: {
-    // display: 'none', // hides 
-    position: 'fixed',
-    width: '100%',
-    left: '50%',
-    bottom: '40px',
-    height: '55px',
-    // right: '30px',
-    zIndex: 1, // so this doesn't overlap anything
-    // scrollBehavior: 'smooth',
-    cursor: 'pointer',
-    color: 'green',
-    paddingRight: '120px',
-},
-formButton: {
-    '&:hover': {
-        backgroundColor: 'grey'
-    },
+    backgroundColor: 'gray',
 },
 }));
 
@@ -150,45 +131,9 @@ export const AboutMe = () => {
             setVisible(false)
         }
     };
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
-    window.addEventListener('scroll', toggleVisible);
-
-
-
-    // const scrollFunction = () => {
-    //     window.scrollTo(0,0);
-    // }
-
-
-
-    // const [diplay, setDiaply] = useState('none') <--- use this for the arrow appearing 
-    // const scrollFunction = () => {
-    //     if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //         setDisplay('block');
-    //     } else {
-    //         display;
-    // }
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    // window.onscroll = function() {scrollFunction()};
-
-    // When the user clicks on the button, scroll to the top of the document
-    // function topFunction() {
-    // document.body.scrollTop = 0; // For Safari
-    // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    // };
-
-    const CoffeeIcon = <FontAwesomeIcon icon={faArrowUp} />
 
     return (
     <div>
-
-        <Button><FaArrowCircleUp size={"2x"} onClick={scrollToTop} style={{display: visible ? 'inline' : 'none'}} className={`${classes.arrowUp} ${classes.formButton}`} /></Button>
 
         <nav className={classes.sticky}>
             <Button variant="contained" color="secondary" startIcon={<HomeIcon style={{ fontSize: 30 }} />}
@@ -203,6 +148,7 @@ export const AboutMe = () => {
             <Button variant="contained" color="secondary" startIcon={<ContactMailIcon style={{ fontSize: 30 }} />}
             className={classes.button} type="submit" component={Link} to={'/Contact'}>Contact Me</Button>
         </nav>
+
         <div className={classes.c4}>
             <Container maxWidth="sm" className={`${classes.center} ${classes.padding}`}>
                 <h1 className={classes.padding2}>About Me</h1>
@@ -336,61 +282,11 @@ export const AboutMe = () => {
                         </Grid>
                     </Grid>
                 </Container>
-
-
             </Container>
         </div>
+        <ScrollBar />
     </div>
    );
 }
 
-
-// const useStyles = makeStyles({
-//     root: {
-//         color: 'blue',
-//         fontSize: '50px',
-//         padding: '0',
-//         margin: '0'
-//     },
-//     navbar_container: {
-//         display: 'flex',
-//         justifyContent: 'space-between', //everything is evenly spaced as far as the nav items
-//         alignItems: 'center'
-//     },
-//     logo_navigation: {
-//         listStyle: 'none',
-//         textTransform: 'uppercase',
-//         textDecoration: 'none'
-//     },
-//     navigation: {
-//         display: 'flex'
-//     },
-//     nav_a:{
-//         display: 'block',
-//         padding: '1em',
-//         color: 'black',
-//         fontSize: '1.3rem'
-//     }
-// })
-
-// export const Projects = () => {
-//     const classes = useStyles();
-//     return (
-//         <nav>
-//             <div className={classes.navbar_container}>
-//                 <ul className={`${classes.navigation} ${classes.logo_navigation}`}>
-//                     <li>
-//                         <Link to='/' className={classes.nav_a}>Home</Link>
-//                     </li>
-//                     <li>
-//                         <Link to='/aboutMe' className={classes.nav_a}>About Me</Link>
-//                     </li>
-//                     <li>
-//                         <Link to='/Projects' className={classes.nav_a}>Projects</Link>
-//                     </li>
-//                 </ul>
-//             </div>
-//         </nav>
-//     )
-// }
 

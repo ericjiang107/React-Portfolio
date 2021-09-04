@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         zIndex: 100,
         width: '100%',
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`
+        backgroundColor: 'gray',
     },
     padding: {
         paddingTop: '90px',
