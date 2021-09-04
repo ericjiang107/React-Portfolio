@@ -30,15 +30,6 @@ import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 // For image:
 import background from '../../components/assets/images/photo-1475274047050-1d0c0975c63e.jpg';
-// For cardMedia:
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import { url } from 'inspector';
-// import fontawesome:
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // importing Scrollup Bar component:
 import { ScrollBar } from '..';
 
@@ -72,6 +63,7 @@ padding: {
 },
 morepadding: {
     paddingTop: '40px',
+    paddingBottom: '70px',
 },
 background_Image: {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
@@ -91,7 +83,7 @@ padding2: {
 },
 padding3: {
     paddingBottom: '35px',
-    paddingTop: '35px'
+    paddingTop: '15px'
 },
 root2: {
     flexGrow: 1,
@@ -163,7 +155,7 @@ export const AboutMe = () => {
                         <br></br>
                         <br></br>
                         <p>
-                        I pride myself in manipulating code and working as a contributor to a component that is team based. I’m driven by engaging with others and providing a safe space as a sounding board to develop meaningful work. 
+                            I pride myself in manipulating code and working as a contributor to a component that is team based. I’m driven by engaging with others and providing a safe space as a sounding board to develop meaningful work. 
                         </p>
                         <br></br>
                         <br></br>
@@ -183,101 +175,109 @@ export const AboutMe = () => {
                         </p>
                     </div>
                     <div className="centerButton">
-                        <form action="https://ericjiang107.github.io/ResumeTest/">
+                        <form onClick={() => window.open("https://ericjiang107.github.io/ResumeTest/", "_blank")}>
                             <input className="styleButton" type="submit" value="Check Out My Resume" />
                         </form>
                     </div>
                 </Container>
             </div>
                 
-                <Container maxWidth="md" className={classes.morepadding}>
-                    <h1 className={`${classes.padding3} ${classes.center2}`}>Timeline</h1>
-                    <Timeline align="alternate">
-                    <TimelineItem>
-                        <TimelineOppositeContent>
-                        <Typography variant="body2" color="error">
-                            May, 2020
+            <Container maxWidth="md" className={classes.morepadding}>
+                <h1 className={`${classes.padding3} ${classes.center2}`}>Timeline</h1>
+                <Timeline align="alternate">
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                    <Typography variant="body2" color="error">
+                        May, 2020
+                    </Typography>
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                    <TimelineDot color="inherit">
+                        <SchoolIcon style={{ fontSize: 30 }} />
+                    </TimelineDot>
+                    <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                    <Paper elevation={3} className={classes.paper}>
+                        <Typography variant="h6" component="h1">
+                        Graduate
                         </Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot color="inherit">
-                            <SchoolIcon style={{ fontSize: 30 }} />
-                        </TimelineDot>
-                        <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1">
-                            Graduate
-                            </Typography>
-                            <Typography>Completed College with a BS in Mechanical Engineering and a Minor in Mathematics 📜 </Typography>
-                        </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent>
-                        <Typography variant="body2" color="error">
-                            March, 2021
+                        <Typography>Completed College with a BS in Mechanical Engineering and a Minor in Mathematics 📜 </Typography>
+                    </Paper>
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                    <Typography variant="body2" color="error">
+                        March, 2021
+                    </Typography>
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                    <TimelineDot color="primary">
+                        <WorkIcon style={{ fontSize: 25 }} />
+                    </TimelineDot>
+                    <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                    <Paper elevation={3} className={classes.paper}>
+                        <Typography variant="h6" component="h1">
+                        Sales and Application Engineer
                         </Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot color="primary">
-                            <WorkIcon style={{ fontSize: 25 }} />
-                        </TimelineDot>
-                        <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1">
-                            Sales and Application Engineer
-                            </Typography>
-                            <Typography>Got hired as a Sales and Application Engineer at Omega Engineering 👷‍♂️ </Typography>
-                        </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent>
-                            <Typography variant="body2" color="error">
-                                May 2021
-                            </Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot color="primary" variant="outlined">
-                            <WorkOffIcon style={{ fontSize: 25 }} />
-                        </TimelineDot>
-                        <TimelineConnector className={classes.secondaryTail} />
-                        </TimelineSeparator>
-                        <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1">
-                            Quit Work
-                            </Typography>
-                            <Typography>Left work because of personal reasons and decided to pursue coding due to interest</Typography>
-                        </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent>
-                            <Typography variant="body2" color="error">
-                                July 2021
-                            </Typography>
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                        <TimelineDot color="secondary">
-                            <GitHubIcon2 style={{ fontSize: 25 }} />
-                        </TimelineDot>
-                        </TimelineSeparator>
-                        <TimelineContent>
-                        <Paper elevation={3} className={classes.paper}>
-                            <Typography variant="h6" component="h1">
-                            Acceptance/Start of Coding Temple
-                            </Typography>
-                            <Typography>Got accepted to Coding Temple and currently attending classes 👨‍💻 </Typography>
-                        </Paper>
-                        </TimelineContent>
-                    </TimelineItem>
+                        <Typography>Got hired as a Sales and Application Engineer at Omega Engineering 👷‍♂️ </Typography>
+                    </Paper>
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                        <Typography variant="body2" color="error">
+                            May 2021
+                        </Typography>
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                    <TimelineDot color="primary" variant="outlined">
+                        <WorkOffIcon style={{ fontSize: 25 }} />
+                    </TimelineDot>
+                    <TimelineConnector className={classes.secondaryTail} />
+                    </TimelineSeparator>
+                    <TimelineContent>
+                    <Paper elevation={3} className={classes.paper}>
+                        <Typography variant="h6" component="h1">
+                        Quit Work
+                        </Typography>
+                        <Typography>Left work because of personal reasons and decided to pursue coding due to interest</Typography>
+                    </Paper>
+                    </TimelineContent>
+                </TimelineItem>
+                <TimelineItem>
+                    <TimelineOppositeContent>
+                        <Typography variant="body2" color="error">
+                            July 2021
+                        </Typography>
+                    </TimelineOppositeContent>
+                    <TimelineSeparator>
+                    <TimelineDot color="secondary">
+                        <GitHubIcon2 style={{ fontSize: 25 }} />
+                    </TimelineDot>
+                    </TimelineSeparator>
+                    <TimelineContent>
+                    <Paper elevation={3} className={classes.paper}>
+                        <Typography variant="h6" component="h1">
+                        Acceptance/Start of Coding Temple
+                        </Typography>
+                        <Typography>Got accepted to Coding Temple and currently attending classes 👨‍💻 </Typography>
+                    </Paper>
+                    </TimelineContent>
+                </TimelineItem>
                 </Timeline>
             </Container>
+            <div className="colors centerButton github moreBot">
+                <div className="bot">
+                    <h1> My GitHub Schedule </h1>
+                </div>
+                <div>
+                    <img src={ require("../assets/images/Github.JPG").default } />
+                </div>
+            </div>
         </div>
         <ScrollBar />
     </div>

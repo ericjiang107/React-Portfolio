@@ -19,7 +19,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 // importing pictures:
-import background from '../../components/assets/images/2016.jpg';
+import background from '../../components/assets/images/photo-1475274047050-1d0c0975c63e.jpg';
 
 // interface Props {
 //     title: string;
@@ -122,15 +122,16 @@ export const Projects = () => {
                                 component="img"
                                 alt="Capstone Project: Single Card Price Checker (SCPC)"
                                 height="300"
-                                image="/static/images/cards/contemplative-reptile.jpg"
+                                image={require("../assets/images/Capstone.JPG").default}
                                 title="Capstone Project: Single Card Price Checker (SCPC)"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Capstone-Project" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
+                                </Button>
+                                <Button size="small" target="_blank" color="primary" href="https://scpc-c42d9.web.app/" onClick={() => console.log('clicked')} type="submit">
+                                Project Link
                                 </Button>
                             </CardActions>
                             </Card>
@@ -142,14 +143,12 @@ export const Projects = () => {
                                 component="img"
                                 alt="React Portfolio"
                                 height="300"
-                                image="/static/images/cards/contemplative-reptile.jpg"
+                                image={require("../assets/images/portfolio.JPG").default}
                                 title="React Portfolio"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary">
+                                <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/React-Portfolio" onClick={() => console.log('clicked')} type="submit">
                                 Github Repository
                                 </Button>
                             </CardActions>
@@ -165,8 +164,6 @@ export const Projects = () => {
                                 image={require("../assets/images/Flask_Gundam.JPG").default}
                                 title="Flask Gundam"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
@@ -186,11 +183,9 @@ export const Projects = () => {
                                 component="img"
                                 alt="Pokemon Database"
                                 height="200"
-                                image={require("../../components/assets/images/Pokemon.JPG").default}
+                                image={require("../../components/assets/images/pokemonJS.JPG").default}
                                 title="Pokemon Database"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
@@ -209,8 +204,6 @@ export const Projects = () => {
                                 image={require("../../components/assets/images/ROI.JPG").default}
                                 title="ROI"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
@@ -226,11 +219,9 @@ export const Projects = () => {
                                 component="img"
                                 alt="Weather_App"
                                 height="200"
-                                image={require("../../components/assets/images/Weather_App.JPG").default}
+                                image={require("../../components/assets/images/weatherapi.JPG").default}
                                 title="Weather_App"
                                 />
-                                <CardContent>
-                                </CardContent>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">

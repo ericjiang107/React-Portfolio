@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { classicNameResolver } from 'typescript';
 import me from '../../components/assets/images/linkedin.jpg';
-import background from '../../components/assets/images/2016.jpg';
+import background from '../../components/assets/images/photo-1475274047050-1d0c0975c63e.jpg';
 import Button from '@material-ui/core/Button';
 import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
@@ -12,24 +12,13 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 import { Link } from 'react-router-dom';
 import {db} from '../firebaseConfig';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         color: 'blue',
         fontSize: '50px',
         padding: '0',
         margin: '0'
-    },
-    me: {
-        backgroundImage: `url(${me})`,
-        width: '100%',
-        height: '100%',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        // position: 'absolute',
-        paddingTop: '81.25%',
-        borderRadius: '50%',
-        margin: 'auto'
     },
     background_Image: {
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background})`,
@@ -53,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     },
     // for the forms section:
     formSection: {
-        height: '100vh',
+        height: '60vh',
         display: 'flex',
         flexDirection: 'column' as 'column',
         paddingTop: '40px',
@@ -102,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         zIndex: 100,
         width: '100%',
-        backgroundColor: 'gray',
+        // backgroundColor: 'gray',
     },
     padding: {
         paddingTop: '90px',

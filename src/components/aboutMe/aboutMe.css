@@ -19,3 +19,16 @@
     padding-bottom: 35px;
 }
 
+.github {
+    padding: 20px;
+}
+
+.bot {
+    padding-bottom: 25px;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.moreBot {
+    padding-bottom: '20px';
+}
