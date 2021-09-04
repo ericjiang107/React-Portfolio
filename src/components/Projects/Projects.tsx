@@ -8,6 +8,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 import me from '../../components/assets/images/linkedin.jpg';
 import Container from '@material-ui/core/Container';
+import './Projects.css';
 import Box from '@material-ui/core/Box';
 // importing grid:
 import Paper from '@material-ui/core/Paper';
@@ -125,6 +126,9 @@ export const Projects = () => {
                                 image={require("../assets/images/Capstone.JPG").default}
                                 title="Capstone Project: Single Card Price Checker (SCPC)"
                                 />
+                                <div className="divs">
+                                    Capstone Project: Single Card Price Checker (SCPC)
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Capstone-Project" onClick={() => console.log('clicked')} type="submit">
@@ -146,6 +150,9 @@ export const Projects = () => {
                                 image={require("../assets/images/portfolio.JPG").default}
                                 title="React Portfolio"
                                 />
+                                <div className="divs">
+                                    React Portfolio 
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/React-Portfolio" onClick={() => console.log('clicked')} type="submit">
@@ -164,6 +171,9 @@ export const Projects = () => {
                                 image={require("../assets/images/Flask_Gundam.JPG").default}
                                 title="Flask Gundam"
                                 />
+                                <div className="divs">
+                                    Gunpla Showcase Flask Website 
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Flask-Assignment-1" onClick={() => console.log('clicked')} type="submit">
@@ -186,6 +196,9 @@ export const Projects = () => {
                                 image={require("../../components/assets/images/pokemonJS.JPG").default}
                                 title="Pokemon Database"
                                 />
+                                <div className="divs">
+                                    Pokemon Database Using Javascript DOM
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Pokemon-Database" onClick={() => console.log('clicked')} type="submit">
@@ -204,6 +217,9 @@ export const Projects = () => {
                                 image={require("../../components/assets/images/ROI.JPG").default}
                                 title="ROI"
                                 />
+                                <div className="divs">
+                                    ROI Python Project
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/ROI-Project" onClick={() => console.log('clicked')} type="submit">
@@ -222,6 +238,9 @@ export const Projects = () => {
                                 image={require("../../components/assets/images/weatherapi.JPG").default}
                                 title="Weather_App"
                                 />
+                                <div className="divs">
+                                    Weather Forecast Project
+                                </div>
                             </CardActionArea>
                             <CardActions>
                                 <Button size="small" target="_blank" color="primary" href="https://github.com/ericjiang107/Weather-App-Project" onClick={() => console.log('clicked')} type="submit">
