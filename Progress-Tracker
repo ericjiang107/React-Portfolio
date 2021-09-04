@@ -16,4 +16,5 @@ code for the bar). The scrollup bar still needs a bit of styling update but the 
 Found out there were mild style changes that impacted the scrollup bar. Will continue to debug. 
 
 **`Day 7`**: Updated Home page with proper background image. Added Scroll to top component and fixed navigation in home page. Updated About Me page 
-with fixed navigation images, background color and updated about me section with new text as well as resume link button. 
+with fixed navigation images, background color and updated about me section with new text as well as resume link button. Changed Contact Me page's 
+background and nav bar as well as fixed the height of the form. Additionally, I added my github schedule/number of times I've committed on there. 
