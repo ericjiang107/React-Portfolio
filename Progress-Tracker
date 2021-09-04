@@ -15,4 +15,5 @@ Day 6: Added scrollup bar feature. Fixed TypeError (first fix: using console.log
 code for the bar). The scrollup bar still needs a bit of styling update but the overall functionality works. Debugged code for troubleshooting.
 Found out there were mild style changes that impacted the scrollup bar. Will continue to debug. 
 
-Day 7: Updated Home page with proper background image. Added Scroll to top component and fixed navigation in home page. 
+Day 7: Updated Home page with proper background image. Added Scroll to top component and fixed navigation in home page. Updated About Me page 
+with fixed navigation images, background color and updated about me section with new text as well as resume link button. 
