@@ -1,0 +1,21 @@
+.colors {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.button {
+    text-decoration: none;
+}
+
+.styleButton {
+    padding: 15px;
+    width: 24%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.centerButton {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
